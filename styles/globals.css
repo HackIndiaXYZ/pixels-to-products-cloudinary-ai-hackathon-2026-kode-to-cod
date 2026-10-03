@@ -1,0 +1,45 @@
+:root { --bg:#1b1220; --card:#241829; --ink:#efe8dc; --gate:#f2b441; --mute:#a89bb0; --line:#3a2c42; --bad:#ff8a80; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:'Bricolage Grotesque',system-ui,sans-serif; line-height:1.5; }
+h1 { font-size:clamp(2.2rem,6vw,4rem); font-weight:800; margin:0; letter-spacing:-.03em; }
+h2 { margin:0 0 8px; } h3 { margin:16px 0 6px; }
+a { color:var(--gate); }
+.wrap { max-width:960px; margin:0 auto; padding:28px 18px 90px; }
+.tag { color:var(--gate); margin:0 0 20px; }
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0; border-bottom:1px solid var(--line); }
+.tabs button { background:none; color:var(--mute); border-radius:6px 6px 0 0; margin:0; }
+.tabs button.on { color:var(--bg); background:var(--gate); }
+label { display:block; margin:12px 0; color:var(--mute); font-size:.92rem; }
+input, textarea, select { display:block; width:100%; margin-top:5px; padding:9px; background:var(--card); color:var(--ink); border:1px solid var(--line); border-radius:6px; font:inherit; }
+input[type=checkbox] { display:inline-block; width:auto; margin:0 8px 0 0; }
+button { background:var(--gate); color:#1b1220; border:0; padding:10px 16px; font:inherit; font-weight:700; border-radius:6px; cursor:pointer; margin:6px 6px 0 0; }
+button.ghost { background:none; color:var(--gate); border:1px solid var(--gate); }
+button:disabled { opacity:.4; cursor:not-allowed; }
+:focus-visible { outline:2px solid var(--gate); outline-offset:2px; }
+.row { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin:12px 0; }
+.hint, .msg { color:var(--mute); } .err { color:var(--bad); }
+code { background:var(--card); padding:2px 6px; border-radius:4px; word-break:break-all; font-size:.85rem; }
+.pill { display:inline-block; padding:1px 9px; border-radius:99px; font-size:.78rem; background:var(--line); margin-right:6px; }
+.pill.ok { background:var(--gate); color:#1b1220; }
+table { width:100%; border-collapse:collapse; font-size:.88rem; } th,td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+.stage { position:relative; display:inline-block; max-width:100%; touch-action:none; cursor:crosshair; }
+.stage img { display:block; max-width:100%; max-height:60vh; user-select:none; }
+.box { position:absolute; border:2px dashed var(--gate); background:rgba(242,180,65,.25); pointer-events:none; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; }
+.grid img, .grid video { width:100%; display:block; border-radius:4px; background:#000; }
+figure { margin:0; } figcaption { font-size:.8rem; word-break:break-word; }
+.embed { position:relative; margin:0; background:#000; min-height:100vh; display:flex; align-items:center; justify-content:center; color:var(--ink); }
+.embed > img, .embed > video { max-width:100%; max-height:100vh; display:block; }
+.blocked { padding:24px; text-align:center; }
+.badge { position:absolute; left:10px; top:10px; background:rgba(27,18,32,.88); padding:6px 12px; border-radius:4px; font-weight:700; font-variant-numeric:tabular-nums; }
+.badge small { display:block; font-weight:400; font-size:.72rem; color:var(--mute); }
+.badge.on { background:var(--gate); color:#1b1220; }
+.synced { position:absolute; right:10px; bottom:8px; font-size:.72rem; color:var(--ink); opacity:.75; }
+.dl { position:absolute; right:10px; top:10px; background:var(--gate); color:#1b1220; padding:6px 12px; border-radius:4px; text-decoration:none; font-weight:700; }
+.partner { max-width:720px; margin:0 auto; padding:28px 18px 60px; }
+.partner header { border-bottom:1px solid var(--line); padding-bottom:10px; margin-bottom:20px; }
+.partner h1 { font-size:1.9rem; }
+.partner iframe { width:100%; height:520px; border:1px solid var(--line); border-radius:6px; }
+.partner.cityplex { --gate:#6fd3c0; }
+@media (prefers-reduced-motion:reduce){ * { animation:none!important; transition:none!important; } }

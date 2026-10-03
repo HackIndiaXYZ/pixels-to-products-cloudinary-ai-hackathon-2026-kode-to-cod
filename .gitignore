@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.data/
+.env.local
+.env.production.local
+unveil/
+!.env.example
+npm-debug.log*
+.DS_Store
